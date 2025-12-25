@@ -1,0 +1,107 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+    /* Offset for fixed header */
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.content {
+    max-width: 700px;
+}
+
+.greeting {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.headline {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .headline {
+        font-size: 5rem;
+    }
+}
+
+.gradientText {
+    background: linear-gradient(135deg, #fff 0%, var(--primary-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #a1a1a1;
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+}
+
+.actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.primaryButton {
+    padding: 0.8rem 2rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s;
+}
+
+.primaryButton:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.secondaryButton {
+    padding: 0.8rem 2rem;
+    background-color: transparent;
+    color: var(--foreground);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.secondaryButton:hover {
+    border-color: var(--primary);
+    background-color: rgba(109, 40, 217, 0.05);
+}
+
+.backgroundBlur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+    opacity: 0.15;
+    filter: blur(80px);
+    z-index: 1;
+}
